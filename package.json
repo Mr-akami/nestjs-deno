@@ -6,14 +6,18 @@
   "private": true,
   "license": "UNLICENSED",
   "type": "module",
+  "packageManager": "pnpm@8.15.5",
+  "engines": {
+    "pnpm": ">=8"
+  },
   "scripts": {
-    "build": "nest build",
+    "build": "deno compile --allow-env --allow-net --allow-read --allow-run --allow-sys --no-check --output ./dist/server src/main.ts",
     "format": "deno fmt",
+    "lint": "deno lint",
     "start": "deno run --allow-env --allow-net --allow-read=. src/main.ts",
     "start:debug": "deno run --allow-env --allow-net --allow-read=. --inspect=127.0.0.1:9229 --watch src/main.ts",
     "start:dev": "deno run --allow-env --allow-net --allow-read=. --watch src/main.ts",
     "start:prod": "deno run --allow-env --allow-net --allow-read=. src/main.ts",
-    "lint": "deno lint",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:cov": "vitest run --coverage",
