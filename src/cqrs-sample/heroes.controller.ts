@@ -6,12 +6,14 @@ import { Hero } from './models/hero.model.ts';
 import { GetHeroesQuery } from './queries/impl/index.ts';
 import { ZodSerializerDto } from 'nestjs-zod';
 import { ApiCreatedResponse } from '@nestjs/swagger';
+import { HerosService } from './heros.service.ts';
 
 @Controller('hero')
 export class HeroesGameController {
   constructor(
     private readonly commandBus: CommandBus,
     private readonly queryBus: QueryBus,
+    private readonly heroService: HerosService,
   ) {}
 
   @Post(':id/kill')
@@ -23,7 +25,9 @@ export class HeroesGameController {
     @Body() dto: KillDragonDto,
   ): Promise<KillDragonDto> {
     console.log(dto);
-    return this.commandBus.execute(new KillDragonCommand(id, dto.dragonId));
+    return this.heroService.kill(id, dto);
+
+    // return this.commandBus.execute(new KillDragonCommand(id, dto.dragonId));
   }
 
   @Get()
