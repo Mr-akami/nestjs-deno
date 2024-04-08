@@ -1,0 +1,6 @@
+{
+  "name": "client",
+  "scripts": {
+    "test": "echo \"hello client\""
+  }
+}

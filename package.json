@@ -1,13 +1,9 @@
 {
   "name": "root",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "libs/*"
-  ],
   "scripts": {
-    "build": "pnpm --filter ./apps/* run build",
-    "test": "pnpm --filter ./apps/* run test",
-    "server": "pnpm -F ./apps/server run start"
+    "ser": "pnpm -F server",
+    "client": "pnpm -F client",
+    "lib1": "pnpm -F lib1",
+    "echo": "echo \"Hello, world!\""
   }
 }
