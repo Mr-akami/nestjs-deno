@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module.ts';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { HeroesGameModule } from './cqrs-sample/heroes.module.ts';
 import { patchNestJsSwagger } from 'nestjs-zod';
 

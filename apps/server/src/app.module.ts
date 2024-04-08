@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller.ts';
 import { AppService } from './app.service.ts';
 import { HeroesGameModule } from './cqrs-sample/heroes.module.ts';
-import { ZodValidationPipe, ZodSerializerInterceptor } from 'nestjs-zod';
-import { APP_PIPE, APP_INTERCEPTOR } from '@nestjs/core';
+import { ZodSerializerInterceptor, ZodValidationPipe } from 'nestjs-zod';
+import { APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
 
 @Module({
   imports: [HeroesGameModule],
