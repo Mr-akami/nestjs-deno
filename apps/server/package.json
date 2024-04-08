@@ -15,15 +15,16 @@
     "build": "deno compile --allow-env --allow-net --allow-read --allow-run --allow-sys --no-check --output ./dist/server src/main.ts",
     "format": "deno fmt",
     "lint": "deno lint",
-    "start": "deno run --allow-env --allow-net --allow-read=. src/main.ts",
-    "start:debug": "deno run --allow-env --allow-net --allow-read=. --inspect=127.0.0.1:9229 --watch src/main.ts",
-    "start:dev": "deno run --allow-env --allow-net --allow-read=. --watch src/main.ts",
-    "start:prod": "deno run --allow-env --allow-net --allow-read=. src/main.ts",
+    "start": "deno run --allow-env --allow-net --allow-read src/main.ts",
+    "start:debug": "deno run --allow-env --allow-net --allow-read --inspect=127.0.0.1:9229 --watch src/main.ts",
+    "start:dev": "deno run --allow-env --allow-net --allow-read --watch src/main.ts",
+    "start:prod": "deno run --allow-env --allow-net --allow-read src/main.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:cov": "vitest run --coverage",
     "test:debug": "vitest --inspect-brk --inspect --logHeapUsage --poolOptions.threads.singleThread",
-    "test:e2e": "vitest run --config ./vitest.config.e2e.ts"
+    "test:e2e": "vitest run --config ./vitest.config.e2e.ts",
+    "lib1": "pnpm -F \"lib1\""
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

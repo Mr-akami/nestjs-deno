@@ -1,0 +1,6 @@
+{
+  "name": "lib1",
+  "scripts": {
+    "test": "echo \"hello lib1!\""
+  }
+}
