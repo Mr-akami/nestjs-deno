@@ -1,0 +1,13 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "scripts": {
+    "build": "pnpm --filter ./apps/* run build",
+    "test": "pnpm --filter ./apps/* run test",
+    "server": "pnpm -F ./apps/server run start"
+  }
+}
