@@ -8,7 +8,8 @@
   "type": "module",
   "packageManager": "pnpm@8.15.5",
   "engines": {
-    "pnpm": ">=8"
+    "pnpm": ">=8",
+    "npm": "please_use_pnpm_instead"
   },
   "scripts": {
     "build": "deno compile --allow-env --allow-net --allow-read --allow-run --allow-sys --no-check --output ./dist/server src/main.ts",
